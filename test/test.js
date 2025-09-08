@@ -16,11 +16,13 @@ await describe('node-jsbarcode-svg', async () => {
         CODE128C: '12345678',
         ITF14: '12345678901231',
         pharmacode: '123456',
-        UPC: '123456789999',
+        UPC: '123456789999'
     };
     for (const format of Object.values(formats)) {
         await it(`should support format '${format}'`, () => {
-            const svg = generateBarcodeSvg(specialTestStrings[format] ?? 'PW.25.12345', {
+            const svg = generateBarcodeSvg(
+            // eslint-disable-next-line security/detect-object-injection
+            specialTestStrings[format] ?? 'PW.25.12345', {
                 format,
                 height: 100,
                 width: 2

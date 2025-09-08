@@ -1,0 +1,37 @@
+{
+  "name": "@cityssm/jsbarcode-svg",
+  "version": "0.1.0",
+  "description": "A wrapper around JSBarcode to quickly create SVG barcodes in Node.",
+  "keywords": [
+    "barcode",
+    "jsbarcode",
+    "svg",
+    "upc",
+    "3of9"
+  ],
+  "homepage": "https://github.com/cityssm/node-jsbarcode-svg#readme",
+  "bugs": {
+    "url": "https://github.com/cityssm/node-jsbarcode-svg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cityssm/node-jsbarcode-svg.git"
+  },
+  "license": "MIT",
+  "author": "The Corporation of the City of Sault Ste. Marie",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "coverage": "c8 --reporter=lcov --reporter=text --reporter=text-summary node --test",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.11",
+    "jsbarcode": "^3.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "eslint-config-cityssm": "^29.0.0",
+    "prettier-config-cityssm": "^1.0.0"
+  }
+}

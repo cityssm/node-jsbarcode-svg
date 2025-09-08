@@ -1,0 +1,14 @@
+.github/
+.sonarlint/
+.vscode/
+
+coverage/
+test/
+
+.deepsource.toml
+.gitignore
+.prettierignore
+
+eslint.config.*
+prettier.config.*
+tsconfig.json

@@ -24,6 +24,8 @@ await describe('node-jsbarcode-svg', async () => {
   }
 
   for (const format of Object.values(formats)) {
+
+    // eslint-disable-next-line no-await-in-loop
     await it(`should support format '${format}'`, () => {
       const svg = generateBarcodeSvg(
         // eslint-disable-next-line security/detect-object-injection

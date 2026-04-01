@@ -14,7 +14,8 @@ npm install @cityssm/jsbarcode-svg
 
 ## Usage
 
-See the [JSBarcode Wiki](https://github.com/lindell/JsBarcode/wiki/Options) for the available options.
+See the [JSBarcode Wiki](https://github.com/lindell/JsBarcode/wiki/Options)
+for the available options.
 
 ```javascript
 import generateBarcodeSvg from '@cityssm/jsbarcode-svg'
@@ -46,4 +47,5 @@ using your prefered templating language.
 Converts URLs and HTML to PDFs using Puppeteer.
 
 [**Sunrise Cemetery Management System (CMS)**](https://github.com/cityssm/sunrise-cms)<br />
-A completely free, open source, web-based application to assist cemetery managers with managing their cemetery records.
+A completely free, open source, web-based application to assist cemetery managers
+with managing their cemetery records.

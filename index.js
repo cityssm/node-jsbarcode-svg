@@ -8,12 +8,14 @@ import JsBarcode from 'jsbarcode';
  */
 export default function generateSvg(barcodeString, options) {
     const xmlSerializer = new XMLSerializer();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
     const barcodeDocument = new DOMImplementation().createDocument('http://www.w3.org/1999/xhtml', 'html');
     const svgNode = barcodeDocument.createElementNS('http://www.w3.org/2000/svg', 'svg');
     JsBarcode(svgNode, barcodeString, {
         ...options,
         xmlDocument: barcodeDocument
     });
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
     return xmlSerializer.serializeToString(svgNode);
 }
 export const formats = {

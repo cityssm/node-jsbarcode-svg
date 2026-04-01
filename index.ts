@@ -1,4 +1,4 @@
-import { DOMImplementation, XMLSerializer } from '@xmldom/xmldom'
+import { type Node, DOMImplementation, XMLSerializer } from '@xmldom/xmldom'
 import JsBarcode from 'jsbarcode'
 
 /**
@@ -13,10 +13,12 @@ export default function generateSvg(
 ): string {
   const xmlSerializer = new XMLSerializer()
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
   const barcodeDocument = new DOMImplementation().createDocument(
     'http://www.w3.org/1999/xhtml',
     'html'
-  )
+  ) as unknown as XMLDocument
+
   const svgNode = barcodeDocument.createElementNS(
     'http://www.w3.org/2000/svg',
     'svg'
@@ -27,7 +29,8 @@ export default function generateSvg(
     xmlDocument: barcodeDocument
   })
 
-  return xmlSerializer.serializeToString(svgNode)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
+  return xmlSerializer.serializeToString(svgNode as unknown as Node)
 }
 
 export const formats = {

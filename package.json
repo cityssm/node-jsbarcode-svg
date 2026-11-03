@@ -28,16 +28,16 @@
     "index.*"
   ],
   "scripts": {
-    "coverage": "c8 --reporter=lcov --reporter=text --reporter=text-summary node --test",
-    "test": "node --test"
+    "coverage": "c8 --reporter=lcov --reporter=text --reporter=text-summary node --test \"test/**/test.js\"",
+    "test": "node --test \"test/**/test.js\""
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.9.9",
+    "@xmldom/xmldom": "^0.9.12",
     "jsbarcode": "^3.12.3"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "eslint-config-cityssm": "^39.0.0",
-    "prettier-config-cityssm": "^2.1.1"
+    "@types/node": "^26.6.6",
+    "eslint-config-cityssm": "^59.0.1",
+    "prettier-config-cityssm": "^2.2.0"
   }
 }

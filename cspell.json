@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "barcodes",
+    "cityssm",
+    "codabar",
+    "jsbarcode",
+    "pharmacode"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
